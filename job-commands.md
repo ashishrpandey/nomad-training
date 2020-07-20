@@ -18,6 +18,7 @@
     nomad job stop       <name>  Stop a running job
     nomad job validate       Checks if a given job specification is valid
 
+
 - For help execute  
 
-  nomad job -help 
+        nomad job -help 
