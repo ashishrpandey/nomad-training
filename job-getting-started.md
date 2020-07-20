@@ -38,6 +38,10 @@ Verify that the task is runnning by executing
 See the status of the job by running 
 
      nomad job status example
+     OR 
+     nomad status example
+     
+     
 
 
 
