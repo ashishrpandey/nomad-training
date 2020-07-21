@@ -37,6 +37,12 @@ Observe that the jobs are schduled on the client node. YOu can verify it by runn
 
     docker ps 
     
+## Open the web UI
+On your web browser, open the link below 
 
+http://<public-ip-of-server>:4646
+        
+you shall be able to see the Nomad UI of the server 
+    
     
     
