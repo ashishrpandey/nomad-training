@@ -1,11 +1,18 @@
 ## On Amazon Linux - 
 
+    sduo su -
     sudo yum install -y yum-utils
     sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
 Edit the $releasever by 7 in the hashicorp.repo file 
 
     sudo yum -y install nomad
+    
+Also install Docker and start docker daemon as we would need it later for running jobs.
+
+    sudo yum install docker -y 
+    sudo service docker start 
+    sudo service docker status 
 
 ## Verify the Installation
 
