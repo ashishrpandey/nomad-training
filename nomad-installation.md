@@ -26,6 +26,7 @@ Also install Docker and start docker daemon as we would need it later for runnin
 - Keep it running on this terminal/screen. 
 - Open another terminal on the same machine and exucute - 
 
+
       $sudo su - 
       $nomad node status
       ID        DC   Name                                             Class   Drain  Eligibility  Status
