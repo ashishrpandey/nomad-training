@@ -25,3 +25,18 @@ https://github.com/ashishrpandey/nomad-training/blob/master/client1-config.hcl
 
 $ nomad node status
 
+## Verify by running jobs 
+
+Schedule a job by running below command on the SERVER (not on the client)
+
+    nomad job run example.nomad
+    nomad status example
+    
+    
+Observe that the jobs are schduled on the client node. YOu can verify it by running below command on the client machine - 
+
+    docker ps 
+    
+
+    
+    
