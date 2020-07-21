@@ -40,9 +40,9 @@ Observe that the jobs are schduled on the client node. YOu can verify it by runn
 ## Open the web UI
 On your web browser, open the link below 
 
-http://<public-ip-of-server>:4646
+http://public-ip-of-server:4646
         
-you shall be able to see the Nomad UI of the server 
+- You shall be able to see the Nomad UI of the server 
     
     
     
