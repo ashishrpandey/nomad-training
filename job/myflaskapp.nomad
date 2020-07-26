@@ -36,6 +36,10 @@ job "flaskapp" {
       # Configuration is specific to each driver.
       config {
         image = "ashishrpandey/myflaskapp:v1"
+  	port_map {
+          http = 80
+        }
+
       }
 
       # The service block tells Nomad how to register this service
@@ -46,12 +50,12 @@ job "flaskapp" {
         # numbers, we use labels to refer to them.
         port = "http"
 
-       # check {
-       #   type     = "http"
-       #   path     = "/index.html"
-       #   interval = "10s"
-       #   timeout  = "2s"
-       # }
+       check {
+         type     = "http"
+         path     = "/index.html"
+         interval = "10s"
+         timeout  = "2s"
+       }
       }
 
       # It is possible to set environment variables which will be
