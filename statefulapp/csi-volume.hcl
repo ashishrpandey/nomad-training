@@ -1,0 +1,7 @@
+type = "csi"
+id = "mysql"
+name = "mysql"
+external_id = "${aws_ebs_volume.mysql.id}"
+access_mode = "single-node-writer"
+attachment_mode = "file-system"
+plugin_id = "aws-ebs0"
