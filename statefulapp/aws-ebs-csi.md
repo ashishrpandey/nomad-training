@@ -1,4 +1,6 @@
-$ sudo yum install mysql
+Install mysql-client
+
+      $ sudo yum install mysql
 
 The AWS EBS plugin requires
 - a controller plugin to coordinate access to the EBS volume - plugin-ebs-controller.nomad, and 
