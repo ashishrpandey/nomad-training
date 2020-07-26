@@ -24,7 +24,12 @@ Check the status of plugin
 
     nomad volume register csi-volume.hcl
     
+## launch the job 
 
+      nomad run csi-mysql.nomad
+      
+## Check thes status of the volume  
 
+      nomad volume status mysql
 
 
