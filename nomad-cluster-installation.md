@@ -23,7 +23,7 @@ Also install Git and Docker and start docker daemon as we would need it later fo
 
 ## Verify the Installation
 
-    PATH=$/usr/local/bin/
+    PATH=$PATH:/usr/local/bin/
     nomad
     
 
