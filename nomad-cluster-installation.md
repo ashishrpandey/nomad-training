@@ -52,6 +52,7 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
 find the file here - 
 https://github.com/ashishrpandey/nomad-training/blob/master/client1-config.hcl
 
+   
     cd nomad-training
     vim client1-config.hcl
     
@@ -62,7 +63,7 @@ https://github.com/ashishrpandey/nomad-training/blob/master/client1-config.hcl
 
 ## Verify the status of the cluster 
 
-$ nomad node status
+       $ nomad node status
 
 ## Verify by running jobs 
 
