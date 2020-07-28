@@ -7,6 +7,8 @@ Do the steps below on *both the machines*
     sudo su -
     sudo yum install -y yum-utils
     sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+    
+    
 
 Edit the $releasever by 7 in the hashicorp.repo file 
 
