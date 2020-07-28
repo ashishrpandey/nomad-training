@@ -42,12 +42,21 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
 
 ## On each Client
 
-Before launching Nomad, create a config file for the client1
+
+
+    git clone https://github.com/ashishrpandey/nomad-training
+  
+    
+   Before launching Nomad, create a config file for the client1
+- Modify the servers address by taking the *The Private IP of your Server* in the file - client1-config.hcl 
 find the file here - 
 https://github.com/ashishrpandey/nomad-training/blob/master/client1-config.hcl
 
-    git clone https://github.com/ashishrpandey/nomad-training
     cd nomad-training
+    vim client1-config.hcl
+    
+  Start the Nomad client
+    
     nomad agent -config client1-config.hcl
     
 
