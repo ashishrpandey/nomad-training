@@ -57,7 +57,7 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
     
   Start the Nomad client
     
-    nomad agent -config client1-config.hcl
+        nomad agent -config client1-config.hcl
     
 
 ## Verify the status of the cluster 
