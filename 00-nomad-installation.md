@@ -1,10 +1,9 @@
 ## On Amazon Linux - 
 
-    sudo su -
+   
     sudo yum install -y yum-utils
-    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-
-Edit the $releasever by 7 in the hashicorp.repo file 
+    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+    sudo yum -y install nomad
 
     sudo yum -y install nomad
     
@@ -16,7 +15,6 @@ Also install Docker and start docker daemon as we would need it later for runnin
 
 ## Verify the Installation
 
-    PATH=$/usr/local/bin/
     nomad
     
 # Start the Nomad agent in dev mode
