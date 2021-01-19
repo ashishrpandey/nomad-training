@@ -5,8 +5,7 @@
     sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
     sudo yum -y install nomad
 
-    sudo yum -y install nomad
-    
+     
 Also install Docker and start docker daemon as we would need it later for running jobs.
 
     sudo yum install docker -y 
