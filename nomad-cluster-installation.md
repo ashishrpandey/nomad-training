@@ -4,16 +4,10 @@ Install the required package on server as well as client nodes by following this
 Connect to the both server as well as client. 
 Do the steps below on *both the machines* 
 
-    sudo su -
     sudo yum install -y yum-utils
-    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-    
-    
-
-Edit the $releasever by 7 in the hashicorp.repo file 
-
-    sudo sed -i s/\$releasever/7/g /etc/yum.repos.d/hashicorp.repo
+    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
     sudo yum -y install nomad
+
     
 Also install Git and Docker and start docker daemon as we would need it later for running jobs.
 
@@ -23,7 +17,6 @@ Also install Git and Docker and start docker daemon as we would need it later fo
 
 ## Verify the Installation
 
-    PATH=$PATH:/usr/local/bin/
     nomad
     
 
@@ -41,7 +34,6 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
     nomad agent -config server-config.hcl
 
 ## On each Client
-
 
 
     git clone https://github.com/ashishrpandey/nomad-training
@@ -68,6 +60,7 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
 
 Schedule a job by running below command on the SERVER (not on the client)
 
+    nomad job init
     nomad job run example.nomad
     nomad status example
     
