@@ -14,7 +14,7 @@ client {
     # For demo assume we are talking to server1. For production,
     # this should be like "nomad.service.consul:4647" and a system
     # like Consul used for service discovery.
-    # Replace 127.0.0.1 by the public IP of the server before using it
+    #IMPORTANT ********Replace 127.0.0.1 by the public IP of the server before using it*****
     servers = ["127.0.0.1:4647"]
 }
 
