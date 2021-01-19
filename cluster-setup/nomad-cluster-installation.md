@@ -29,7 +29,7 @@ Also install Git and Docker and start docker daemon as we would need it later fo
 
 Before launching Nomad, create a config file 
 find the file here - 
-https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
+https://github.com/ashishrpandey/nomad-training/blob/master/cluster-setup/server-config.hcl
 
     nomad agent -config server-config.hcl
 
@@ -41,7 +41,7 @@ https://github.com/ashishrpandey/nomad-training/blob/master/server-config.hcl
     
    Before launching Nomad, create a config file for the client1
 - Modify the servers address by taking the *The Private IP of your Server* in the file - client1-config.hcl 
-- find the file here - https://github.com/ashishrpandey/nomad-training/blob/master/client1-config.hcl
+- find the file here - https://github.com/ashishrpandey/nomad-training/blob/master/cluster-setup/client1-config.hcl
 
    
         cd nomad-training
