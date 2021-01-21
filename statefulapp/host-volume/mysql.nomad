@@ -18,6 +18,11 @@ job "mysql-server" {
       mode     = "delay"
     }
 
+        network {
+          port "db" {
+            static = 3306
+          }
+        }
     task "mysql-server" {
       driver = "docker"
 
@@ -34,18 +39,14 @@ job "mysql-server" {
       config {
         image = "hashicorp/mysql-portworx-demo:latest"
 
-        port_map {
-          db = 3306
-        }
+        ports  = ["db"]
       }
 
       resources {
+         cpu    = 200 # MHz
+        memory =  500 # MB
 
-        network {
-          port "db" {
-            static = 3306
-          }
-        }
+
       }
 
       #service {

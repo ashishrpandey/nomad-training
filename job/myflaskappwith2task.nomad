@@ -24,7 +24,7 @@ job "flaskappwithredis" {
   # placed on the same host.
   group "webs" {
     # Specify the number of these tasks we want.
-    count = 1
+    count = 2
         network {
 
           # This requests a dynamic port named "http".
