@@ -77,6 +77,12 @@ job "flaskapp" {
           # This requests a static port named "http". This will
           # restrict this task to running once per host, since
           # there is only one port 80 on each host.
+          
+         # port "http" {
+         #	static = 80
+          #}
+
+          # This requests a dynamic port named "http".
           port "http" {
 		}
         }
