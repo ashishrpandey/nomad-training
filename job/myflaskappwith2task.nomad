@@ -57,8 +57,8 @@ job "flaskappwithredis" {
       # It is possible to set environment variables which will be
       # available to the task when it runs.
       env {
-        "DB_USER" = "web"
-        "DB_PASS" = "loremipsum"
+        DB_USER = "web"
+        DB_PASS = "loremipsum"
       }
 
       # Specify the maximum resources required to run the task,
@@ -108,8 +108,8 @@ job "flaskappwithredis" {
       # It is possible to set environment variables which will be
       # available to the task when it runs.
       env {
-        "DB_USER" = "web"
-        "DB_PASS" = "loremipsum"
+        DB_USER = "web"
+        DB_PASS = "loremipsum"
       }
 
       # Specify the maximum resources required to run the task,

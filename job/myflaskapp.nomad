@@ -52,7 +52,7 @@ job "flaskapp" {
 
        check {
          type     = "http"
-         path     = "/index.html"
+         path     = "/"
          interval = "10s"
          timeout  = "2s"
        }
