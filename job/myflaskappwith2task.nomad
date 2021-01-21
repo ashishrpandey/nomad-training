@@ -12,8 +12,8 @@ job "flaskappwithredis" {
   # properties. See the documentation below for more examples.
   type = "service"
 
-  # Specify this job to have rolling updates, two-at-a-time, with
-  # 30 second intervals.
+  # Specify this job to have rolling updates, one-at-a-time, with
+  # 10 second intervals.
   update {
     stagger      = "10s"
     max_parallel = 1
@@ -25,6 +25,16 @@ job "flaskappwithredis" {
   group "webs" {
     # Specify the number of these tasks we want.
     count = 1
+        network {
+
+          # This requests a dynamic port named "http".
+          port "http" {
+               to  = 80
+		}
+          port "redisport" {
+               to  = 6379
+		}
+        }
 
     # Create an individual task (unit of work). This particular
     # task utilizes a Docker container to front a web application.
@@ -36,6 +46,8 @@ job "flaskappwithredis" {
       # Configuration is specific to each driver.
       config {
         image = "ashishrpandey/myflaskapp:v1"
+        ports = ["http"]
+
       }
 
       # The service block tells Nomad how to register this service
@@ -44,7 +56,8 @@ job "flaskappwithredis" {
         # This tells Consul to monitor the service on the port
         # labelled "http". Since Nomad allocates high dynamic port
         # numbers, we use labels to refer to them.
-        port = "http"
+        #port = "http"
+
 
        # check {
        #   type     = "http"
@@ -67,16 +80,6 @@ job "flaskappwithredis" {
         cpu    = 100 # MHz
         memory = 32 # MB
 
-        network {
-          mbits = 10
-
-          # This requests a dynamic port named "http". This will
-          # restrict this task to running once per host, since
-          # there is only one port 80 on each host.
-          port "http" {
-            static = 80
-		}
-        }
       }
     }
     task "backend" {
@@ -87,6 +90,8 @@ job "flaskappwithredis" {
       # Configuration is specific to each driver.
       config {
         image = "redis"
+        ports = ["redisport"]
+
       }
 
       # The service block tells Nomad how to register this service
@@ -95,7 +100,7 @@ job "flaskappwithredis" {
         # This tells Consul to monitor the service on the port
         # labelled "http". Since Nomad allocates high dynamic port
         # numbers, we use labels to refer to them.
-        port = "http"
+        # port = "http"
 
        # check {
        #   type     = "http"
@@ -118,16 +123,6 @@ job "flaskappwithredis" {
         cpu    = 100 # MHz
         memory = 32 # MB
 
-        network {
-          mbits = 10
-
-          # This requests a dynamic port named "http". This will
-          # restrict this task to running once per host, since
-          # there is only one port 80 on each host.
-          port "http" {
-            static = 6379
-		}
-        }
       }
     }
   }
