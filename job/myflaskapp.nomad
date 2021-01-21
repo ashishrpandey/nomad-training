@@ -61,8 +61,8 @@ job "flaskapp" {
       # It is possible to set environment variables which will be
       # available to the task when it runs.
       env {
-        "DB_USER" = "web"
-        "DB_PASS" = "loremipsum"
+        DB_USER = "web"
+        DB_PASS = "loremipsum"
       }
 
       # Specify the maximum resources required to run the task,
@@ -74,11 +74,10 @@ job "flaskapp" {
         network {
           mbits = 10
 
-          # This requests a dynamic port named "http". This will
+          # This requests a static port named "http". This will
           # restrict this task to running once per host, since
           # there is only one port 80 on each host.
           port "http" {
-            static = 80
 		}
         }
       }
